@@ -1,6 +1,6 @@
-package cl.myhotel.demo.models.repository;
+package cl.myhotel.demo.vehicles.models.repository;
 
-import cl.myhotel.demo.models.entity.Car;
+import cl.myhotel.demo.vehicles.models.entity.Car;
 import jakarta.transaction.Transactional;
 
 @Transactional

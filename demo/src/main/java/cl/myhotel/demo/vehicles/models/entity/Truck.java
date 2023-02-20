@@ -1,6 +1,6 @@
-package cl.myhotel.demo.models.entity;
+package cl.myhotel.demo.vehicles.models.entity;
 
-import cl.myhotel.demo.models.enums.TruckTypes;
+import cl.myhotel.demo.vehicles.models.enums.TruckTypes;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import jakarta.persistence.Entity;

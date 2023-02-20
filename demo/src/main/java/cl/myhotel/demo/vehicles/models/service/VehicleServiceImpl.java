@@ -1,7 +1,7 @@
-package cl.myhotel.demo.models.service;
+package cl.myhotel.demo.vehicles.models.service;
 
-import cl.myhotel.demo.models.entity.Vehicle;
-import cl.myhotel.demo.models.repository.VehicleRepository;
+import cl.myhotel.demo.vehicles.models.entity.Vehicle;
+import cl.myhotel.demo.vehicles.models.repository.VehicleRepository;
 import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

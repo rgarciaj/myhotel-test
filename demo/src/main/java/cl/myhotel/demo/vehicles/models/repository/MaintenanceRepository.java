@@ -1,6 +1,6 @@
-package cl.myhotel.demo.models.repository;
+package cl.myhotel.demo.vehicles.models.repository;
 
-import cl.myhotel.demo.models.entity.Maintenance;
+import cl.myhotel.demo.vehicles.models.entity.Maintenance;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

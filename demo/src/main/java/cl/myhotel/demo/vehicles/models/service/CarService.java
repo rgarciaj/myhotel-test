@@ -1,6 +1,6 @@
-package cl.myhotel.demo.models.service;
+package cl.myhotel.demo.vehicles.models.service;
 
-import cl.myhotel.demo.models.entity.Car;
+import cl.myhotel.demo.vehicles.models.entity.Car;
 
 public interface CarService {
     Iterable<Car> findAll();

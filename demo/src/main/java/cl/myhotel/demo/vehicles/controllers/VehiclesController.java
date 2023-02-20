@@ -1,9 +1,9 @@
-package cl.myhotel.demo.controllers;
+package cl.myhotel.demo.vehicles.controllers;
 
-import cl.myhotel.demo.models.entity.Vehicle;
-import cl.myhotel.demo.models.service.CarService;
-import cl.myhotel.demo.models.service.TruckService;
-import cl.myhotel.demo.models.service.VehicleService;
+import cl.myhotel.demo.vehicles.models.entity.Vehicle;
+import cl.myhotel.demo.vehicles.models.service.CarService;
+import cl.myhotel.demo.vehicles.models.service.TruckService;
+import cl.myhotel.demo.vehicles.models.service.VehicleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
-package cl.myhotel.demo.models.repository;
+package cl.myhotel.demo.vehicles.models.repository;
 
-import cl.myhotel.demo.models.entity.Vehicle;
+import cl.myhotel.demo.vehicles.models.entity.Vehicle;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 

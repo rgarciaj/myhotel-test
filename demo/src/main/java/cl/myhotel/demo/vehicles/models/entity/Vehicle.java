@@ -1,4 +1,4 @@
-package cl.myhotel.demo.models.entity;
+package cl.myhotel.demo.vehicles.models.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;

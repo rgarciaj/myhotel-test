@@ -1,6 +1,6 @@
-package cl.myhotel.demo.models.service;
+package cl.myhotel.demo.vehicles.models.service;
 
-import cl.myhotel.demo.models.entity.Vehicle;
+import cl.myhotel.demo.vehicles.models.entity.Vehicle;
 
 import java.util.List;
 

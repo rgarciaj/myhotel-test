@@ -71,7 +71,7 @@ public class TruckControllers {
         }
 
         logger.info("Finishing createTruck Service");
-        return new ResponseEntity<String>(COD_HTTP200, HttpStatus.OK);
+        return new ResponseEntity<String>(COD_HTTP200, HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)

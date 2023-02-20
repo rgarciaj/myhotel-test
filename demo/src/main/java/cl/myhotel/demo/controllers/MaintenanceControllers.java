@@ -84,7 +84,7 @@ public class MaintenanceControllers {
         }
 
         logger.info("Finishing createMaintenance Service");
-        return new ResponseEntity<>(maintenanceCreated, HttpStatus.OK);
+        return new ResponseEntity<>(maintenanceCreated, HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/{maintenance_id}", method = RequestMethod.DELETE)

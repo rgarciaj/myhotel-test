@@ -71,7 +71,7 @@ public class CarsControllers {
         }
 
         logger.info("Finishing createCar Service");
-        return new ResponseEntity<String>(COD_HTTP200, HttpStatus.OK);
+        return new ResponseEntity<String>(COD_HTTP200, HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
@@ -110,7 +110,7 @@ public class CarsControllers {
         try {
             Car _car = carService.findById(id);
             if (_car == null) {
-                throw new Exception("Car not found");
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, COD_HTTP404);
             }
             carService.delete(_car);
         } catch (Exception e) {

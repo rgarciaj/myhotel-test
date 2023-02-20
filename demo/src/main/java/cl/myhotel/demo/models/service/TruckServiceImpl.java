@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class TruckServiceImpl implements TruckService {
 
@@ -31,8 +33,11 @@ public class TruckServiceImpl implements TruckService {
 
     @Override
     public Truck findById(long id) {
-        Truck truck = truckRepository.findById(id).get();
-        return truck;
+        Optional<Truck> truck = truckRepository.findById(id);
+        if (truck.isPresent()) {
+            return truck.get();
+        }
+        return null;
     }
 
     @Override

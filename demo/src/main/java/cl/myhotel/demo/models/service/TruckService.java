@@ -10,6 +10,5 @@ public interface TruckService {
 
     Truck findById(long id);
 
-
     void delete(Truck truck);
 }

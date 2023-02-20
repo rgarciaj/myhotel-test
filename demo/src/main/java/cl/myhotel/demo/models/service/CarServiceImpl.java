@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class CarServiceImpl implements CarService {
 
@@ -29,8 +31,11 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public Car findById(long id) {
-        Car car = carRepository.findById(id).get();
-        return car;
+        Optional<Car> car = carRepository.findById(id);
+        if (car.isPresent()) {
+            return car.get();
+        }
+        return null;
     }
 
     @Override

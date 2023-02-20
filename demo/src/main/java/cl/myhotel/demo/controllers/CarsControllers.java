@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class CarsControllers {
     private static final Logger logger = LoggerFactory.getLogger(CarsControllers.class.getSimpleName());
 
     private static final String COD_HTTP200 = "Successful operation";
+    private static final String COD_HTTP404 = "Element does not exist";
 
     @Autowired
     private CarService carService;
@@ -36,6 +38,25 @@ public class CarsControllers {
 
         logger.info("Finishing getAllCars Service");
         return new ResponseEntity<List<Car>>(cars, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public ResponseEntity<Car> getCarDetail(@PathVariable long id) throws Exception {
+        logger.info("Starting getCarDetail Service");
+
+        Car _car = null;
+        try {
+            _car = carService.findById(id);
+            if (_car == null) {
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, COD_HTTP404);
+            }
+        } catch (Exception e) {
+            logger.error(e.getClass().toString() + " " + e.getMessage());
+            throw e;
+        }
+
+        logger.info("Finishing getCarDetail Service");
+        return new ResponseEntity<Car>(_car, HttpStatus.OK);
     }
 
     @RequestMapping(value = "", method = RequestMethod.POST)
@@ -60,7 +81,7 @@ public class CarsControllers {
         try {
             Car _car = carService.findById(id);
             if (_car == null) {
-                throw new Exception("Car not found");
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, COD_HTTP404);
             }
             _car.setBrand(car.getBrand());
             _car.setModel(car.getModel());

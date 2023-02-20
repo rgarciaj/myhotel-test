@@ -8,7 +8,5 @@ public interface VehicleService {
 
     List<Vehicle> findAll();
 
-    Vehicle save(Vehicle vehicle);
-
-    Vehicle findById(Integer id);
+    Vehicle findById(long id);
 }

@@ -3,7 +3,8 @@ package cl.myhotel.demo.models.entity;
 import cl.myhotel.demo.models.enums.CarTypes;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 

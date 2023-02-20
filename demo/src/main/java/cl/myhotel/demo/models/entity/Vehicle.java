@@ -32,7 +32,6 @@ public class Vehicle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-
     public Vehicle() {
     }
 
@@ -44,5 +43,4 @@ public class Vehicle {
         this.milage = milage;
         this.engineCapacity = engineCapacity;
     }
-
 }

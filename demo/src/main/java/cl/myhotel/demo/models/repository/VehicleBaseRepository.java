@@ -8,9 +8,6 @@ import org.springframework.data.repository.NoRepositoryBean;
 public interface VehicleBaseRepository<T extends Vehicle>
         extends CrudRepository<T, Long> {
 
-    public T findByPatent(String patent);
-    public T findByBrand(String brand);
-
 }
 
 

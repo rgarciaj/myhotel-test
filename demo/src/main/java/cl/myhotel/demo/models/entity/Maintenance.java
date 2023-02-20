@@ -10,6 +10,7 @@ import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -21,6 +22,7 @@ import java.util.Date;
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class Maintenance implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
     private Date date;
     private String maintenanceDetail;
@@ -31,7 +33,7 @@ public class Maintenance implements Serializable {
     private Vehicle vehicle;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private long id;
 
     public Maintenance() {
     }

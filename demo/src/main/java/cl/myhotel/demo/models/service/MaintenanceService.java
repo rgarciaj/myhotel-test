@@ -2,8 +2,15 @@ package cl.myhotel.demo.models.service;
 
 import cl.myhotel.demo.models.entity.Maintenance;
 
-public interface MaintenanceService {
-    Iterable<Maintenance> findAll(long id);
+import java.util.List;
 
-    Object findByVehicleId(long vehicleId);
+public interface MaintenanceService {
+
+    List<Maintenance> findByVehicleId(long vehicleId);
+
+    Maintenance save(long vehicleId, Maintenance maintenance);
+
+    void delete(Maintenance maintenance);
+
+    Maintenance findById(long maintenanceId);
 }

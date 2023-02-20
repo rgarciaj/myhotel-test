@@ -1,11 +1,15 @@
 package cl.myhotel.demo.models.service;
 
 import cl.myhotel.demo.models.entity.Maintenance;
-import cl.myhotel.demo.models.repository.MaintenanceBaseRepository;
+import cl.myhotel.demo.models.entity.Vehicle;
+import cl.myhotel.demo.models.repository.MaintenanceRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MaintenanceServiceImpl implements MaintenanceService {
@@ -13,17 +17,31 @@ public class MaintenanceServiceImpl implements MaintenanceService {
     private static final Logger logger = LoggerFactory.getLogger(MaintenanceServiceImpl.class.getSimpleName());
 
     @Autowired
-    MaintenanceBaseRepository maintenanceBaseRepository;
+    MaintenanceRepository maintenanceRepository;
+
+    @Autowired
+    VehicleService vehicleRepository;
 
     @Override
-    public Iterable<Maintenance> findAll(long id) {
-        Iterable<Maintenance> maintenances = maintenanceBaseRepository.findAll(id);
-        return maintenances;
+    public List<Maintenance> findByVehicleId(long vehicleId) {
+        return maintenanceRepository.findAllByVehicleId(vehicleId);
     }
 
     @Override
-    public Maintenance findByVehicleId(long vehicleId) {
-        Maintenance maintenances = maintenanceBaseRepository.findByVehicleId(vehicleId);
-        return null;
+    public Maintenance save(long vehicleId, Maintenance maintenance) {
+        Vehicle vehicle = vehicleRepository.findById((int) vehicleId);
+        return maintenanceRepository.save(new Maintenance(maintenance.getDate(), maintenance.getMaintenanceDetail(), vehicle));
     }
+
+    @Override
+    public void delete(Maintenance maintenance) {
+        maintenanceRepository.delete(maintenance);
+    }
+
+    @Override
+    public Maintenance findById(long maintenanceId) {
+        Optional<Maintenance> maintenance = maintenanceRepository.findById(maintenanceId);
+        return maintenance.orElse(null);
+    }
+
 }

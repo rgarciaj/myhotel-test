@@ -28,6 +28,9 @@ public class Location {
     @Column(name = "LOCATION_ID")
     private long id;
 
+    public Location() {
+    }
+
     public Location(String streetAddress, String postalCode, String city, String stateProvince, Country country) {
         this.streetAddress = streetAddress;
         this.postalCode = postalCode;

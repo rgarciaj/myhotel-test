@@ -59,6 +59,9 @@ public class Employee {
     @Column(name = "EMPLOYEE_ID")
     private long id;
 
+    public Employee() {
+    }
+
     public Employee(String firstName, String lastName, String email, String phoneNumber, Date hireDate, float salary, float commissionPct, int managerId, Department department, Job job) {
         this.firstName = firstName;
         this.lastName = lastName;

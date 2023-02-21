@@ -25,6 +25,9 @@ public class JobHistory implements Serializable {
     private long jobId;
     private long departmentId;
 
+    public JobHistory() {
+    }
+
     public JobHistory(long employeeId, String startDate, String endDate, long jobId, long departmentId) {
         this.employeeId = employeeId;
         this.startDate = startDate;

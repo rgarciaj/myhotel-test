@@ -25,6 +25,9 @@ public class Job {
     @Column(name = "JOB_ID")
     private String id;
 
+    public Job() {
+    }
+
     public Job(String jobTitle, float minSalary, float maxSalary) {
         this.jobTitle = jobTitle;
         this.minSalary = minSalary;

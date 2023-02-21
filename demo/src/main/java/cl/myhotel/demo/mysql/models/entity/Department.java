@@ -26,6 +26,9 @@ public class Department {
     @Column(name = "DEPARTMENT_ID")
     private long id;
 
+    public Department() {
+    }
+
     public Department(String departmentName, long managerId, Location location) {
         this.departmentName = departmentName;
         this.managerId = managerId;

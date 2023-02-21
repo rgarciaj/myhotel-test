@@ -23,6 +23,9 @@ public class Country {
     @JoinColumn(name = "REGION_ID")
     private Region region;
 
+    public Country() {
+    }
+
     public Country(String countryId, String countryName, Region region) {
         this.countryId = countryId;
         this.countryName = countryName;

@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-    myhotel-mysql-db:
+    myhotel-db:
         image: mysql:8.0
-        container_name: myhotel-mysql-db
+        container_name: myhotel-db
         command: --default-authentication-plugin=mysql_native_password
         restart: always
         volumes:
@@ -16,3 +16,20 @@ services:
             MYSQL_PASSWORD: 123456
             MYSQL_ROOT_HOST: '%'
             MYSQL_DATABASE: myhotel-test
+
+    myhotel-app:
+        depends_on:
+            - myhotel-db
+        container_name: myhotel-app
+        build:
+            dockerfile: Dockerfile
+        image: myhotel-app:latest
+        ports:
+            - 8080:8080
+        # restart: on-failure
+        environment:
+            SPRING_DATASOURCE_URL: jdbc:mysql://myhotel-db:3306/myhotel-test
+            SPRING_DATASOURCE_USERNAME: root
+            SPRING_DATASOURCE_PASSWORD: 123456
+
+    

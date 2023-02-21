@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "4e5cf865-91ee-41db-aaf7-1513efe4a577",
 		"name": "MyHotel Test",
+		"description": "MyHotel test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "4507942"
 	},
@@ -26,7 +27,8 @@
 										"vehicles",
 										"cars"
 									]
-								}
+								},
+								"description": "Obtener todos los automoviles"
 							},
 							"response": []
 						},
@@ -45,7 +47,8 @@
 										"cars",
 										"1"
 									]
-								}
+								},
+								"description": "Obtiene el detalle de un automóvil"
 							},
 							"response": []
 						},
@@ -72,7 +75,8 @@
 										"vehicles",
 										"cars"
 									]
-								}
+								},
+								"description": "Crea un automóvil"
 							},
 							"response": []
 						},
@@ -100,7 +104,8 @@
 										"cars",
 										"1"
 									]
-								}
+								},
+								"description": "Actualiza un automóvil"
 							},
 							"response": []
 						},
@@ -119,7 +124,8 @@
 										"cars",
 										"20"
 									]
-								}
+								},
+								"description": "Elimina un automóvil"
 							},
 							"response": []
 						}
@@ -142,7 +148,8 @@
 										"vehicles",
 										"trucks"
 									]
-								}
+								},
+								"description": "Obtiene todos los camiones"
 							},
 							"response": []
 						},
@@ -161,7 +168,8 @@
 										"trucks",
 										"4"
 									]
-								}
+								},
+								"description": "Obtiene el detalle de un camión"
 							},
 							"response": []
 						},
@@ -188,7 +196,8 @@
 										"vehicles",
 										"trucks"
 									]
-								}
+								},
+								"description": "Crea un camión"
 							},
 							"response": []
 						},
@@ -216,7 +225,8 @@
 										"trucks",
 										"3"
 									]
-								}
+								},
+								"description": "Actualiza un camión"
 							},
 							"response": []
 						},
@@ -235,7 +245,8 @@
 										"trucks",
 										"6"
 									]
-								}
+								},
+								"description": "Elimina un camión"
 							},
 							"response": []
 						}
@@ -259,7 +270,8 @@
 										"4",
 										"maintenances"
 									]
-								}
+								},
+								"description": "Obtiene las mantenciones de un vehiculo"
 							},
 							"response": []
 						},
@@ -270,7 +282,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"date\": \"2022-01-01\",\n    \"maintenance_detail\": \"Se cambiaron bujias 22222\"\n}",
+									"raw": "{\n    \"date\": \"2022-01-01\",\n    \"maintenance_detail\": \"Se cambiaron bujias\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -278,16 +290,17 @@
 									}
 								},
 								"url": {
-									"raw": "{{HOST}}/vehicles/4/maintenances",
+									"raw": "{{HOST}}/vehicles/2/maintenances",
 									"host": [
 										"{{HOST}}"
 									],
 									"path": [
 										"vehicles",
-										"4",
+										"2",
 										"maintenances"
 									]
-								}
+								},
+								"description": "Agrega una mantención de un vehiculo"
 							},
 							"response": []
 						},
@@ -316,7 +329,8 @@
 										"maintenances",
 										"6"
 									]
-								}
+								},
+								"description": "Elimina un mantención de un vehiculo"
 							},
 							"response": []
 						}
@@ -339,7 +353,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Modulo para administrar vehiculos y sus mantenciones"
 		},
 		{
 			"name": "Employees",
@@ -379,7 +394,8 @@
 										"segments",
 										"A"
 									]
-								}
+								},
+								"description": "Obtener cantidad de empleados dentro de los siguientes segmentos de sueldo:\n\nSEGMENTO A: menor a USD 3.500"
 							},
 							"response": []
 						},
@@ -398,7 +414,8 @@
 										"segments",
 										"B"
 									]
-								}
+								},
+								"description": "Obtener cantidad de empleados dentro de los siguientes segmentos de sueldo:\n\nSEGMENTO B: mayor o igual a USD 3.500 y menor que USD 8.000"
 							},
 							"response": []
 						},
@@ -417,7 +434,8 @@
 										"segments",
 										"C"
 									]
-								}
+								},
+								"description": "Obtener cantidad de empleados dentro de los siguientes segmentos de sueldo:\n\nSEGMENTO C: mayor o igual a USD 8.000."
 							},
 							"response": []
 						},
@@ -435,7 +453,8 @@
 										"employees",
 										"highest-salary-from-departments"
 									]
-								}
+								},
+								"description": "Información del empleado con mayor sueldo de cada departamento."
 							},
 							"response": []
 						},
@@ -445,14 +464,16 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{HOST}}/employees",
+									"raw": "{{HOST}}/employees/oldest-managers",
 									"host": [
 										"{{HOST}}"
 									],
 									"path": [
-										"employees"
+										"employees",
+										"oldest-managers"
 									]
-								}
+								},
+								"description": "Información de los gerentes que hayan sido contratados hace más de 15 años."
 							},
 							"response": []
 						}
@@ -477,7 +498,8 @@
 										"segments",
 										"A"
 									]
-								}
+								},
+								"description": "Obtener cantidad de empleados dentro de los siguientes segmentos de sueldo:\n\nSEGMENTO A: menor a USD 3.500"
 							},
 							"response": []
 						},
@@ -497,7 +519,8 @@
 										"segments",
 										"C"
 									]
-								}
+								},
+								"description": "Obtener cantidad de empleados dentro de los siguientes segmentos de sueldo:\n\nSEGMENTO B: mayor o igual a USD 3.500 y menor que USD 8.000"
 							},
 							"response": []
 						},
@@ -517,7 +540,8 @@
 										"segments",
 										"B"
 									]
-								}
+								},
+								"description": "Obtener cantidad de empleados dentro de los siguientes segmentos de sueldo:\n\nSEGMENTO C: mayor o igual a USD 8.000."
 							},
 							"response": []
 						},
@@ -535,7 +559,8 @@
 										"departments",
 										"avg-salary"
 									]
-								}
+								},
+								"description": "Salario promedio de todos los departamentos que tengan más de 10 empleados."
 							},
 							"response": []
 						}
@@ -555,7 +580,8 @@
 								"stats",
 								"by-country"
 							]
-						}
+						},
+						"description": "Obtener la siguiente información agrupada por país: cantidad empleados, salario promedio, salario más alto, salario más bajo, promedio años antigüedad"
 					},
 					"response": []
 				}

@@ -1,0 +1,592 @@
+{
+	"info": {
+		"_postman_id": "4e5cf865-91ee-41db-aaf7-1513efe4a577",
+		"name": "MyHotel Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4507942"
+	},
+	"item": [
+		{
+			"name": "Vehicles",
+			"item": [
+				{
+					"name": "Cars",
+					"item": [
+						{
+							"name": "get cars",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/vehicles/cars",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"vehicles",
+										"cars"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get car detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/vehicles/cars/1",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"vehicles",
+										"cars",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create car",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"brand\": \"Fiat\",\n    \"model\": \"Argo\",\n    \"patent\": \"KZDW90\",\n    \"milage\": 40000,\n    \"engine_capacity\": 1.8,\n    \"year\": 2019,\n    \"doors\": 4,\n    \"passengers\": 2,\n    \"trunk_capacity\": \"200\",\n    \"type\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/vehicles/cars",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"vehicles",
+										"cars"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update car",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"brand\": \"Subaru\",\n    \"model\": \"Impreza\",\n    \"patent\": \"KZDW91\",\n    \"milage\": 40000,\n    \"engine_capacity\": 1.8,\n    \"year\": 2019,\n    \"doors\": 4,\n    \"passengers\": 2,\n    \"trunk_capacity\": \"200\",\n    \"type\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/vehicles/cars/1",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"vehicles",
+										"cars",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete car",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/vehicles/cars/20",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"vehicles",
+										"cars",
+										"20"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trucks",
+					"item": [
+						{
+							"name": "get trucks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/vehicles/trucks",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"vehicles",
+										"trucks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get truck detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/vehicles/trucks/4",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"vehicles",
+										"trucks",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create truck",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"brand\": \"Subaru\",\n    \"model\": \"Optimus Prime\",\n    \"patent\": \"XXXX54\",\n    \"milage\": 40000,\n    \"engine_capacity\": 5000,\n    \"year\": 2015,\n    \"axles_quantity\": 3,\n    \"capacity\": 1.5,\n    \"type\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/vehicles/trucks",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"vehicles",
+										"trucks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update truck",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"brand\": \"FIAT\",\n    \"model\": \"Optimus Prime\",\n    \"patent\": \"XXXX54\",\n    \"milage\": 40000,\n    \"engine_capacity\": 5000,\n    \"year\": 2015,\n    \"axles_quantity\": 3,\n    \"capacity\": 1.5,\n    \"type\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/vehicles/trucks/3",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"vehicles",
+										"trucks",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete truck",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/vehicles/trucks/6",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"vehicles",
+										"trucks",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Maintenance",
+					"item": [
+						{
+							"name": "get maintenance by vehicle",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/vehicles/4/maintenances",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"vehicles",
+										"4",
+										"maintenances"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add maintenance to vehicle",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2022-01-01\",\n    \"maintenance_detail\": \"Se cambiaron bujias 22222\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/vehicles/4/maintenances",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"vehicles",
+										"4",
+										"maintenances"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove maintenance to vehicle",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2022-01-01\",\n    \"maintenance_detail\": \"Se cambiaron bujias\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/vehicles/4/maintenances/6",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"vehicles",
+										"4",
+										"maintenances",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "get all vehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/vehicles",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employees",
+			"item": [
+				{
+					"name": "Employees",
+					"item": [
+						{
+							"name": "Get all",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/employees",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Segment A",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/employees/segments/A",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"employees",
+										"segments",
+										"A"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Segment B",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/employees/segments/B",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"employees",
+										"segments",
+										"B"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Segment C",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/employees/segments/C",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"employees",
+										"segments",
+										"C"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get highest salary from departments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/employees/highest-salary-from-departments",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"employees",
+										"highest-salary-from-departments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get oldest managers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/employees",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Departments",
+					"item": [
+						{
+							"name": "Get Segment A",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/departments/30/segments/A",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"departments",
+										"30",
+										"segments",
+										"A"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Segment C",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/departments/20/segments/C",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"departments",
+										"20",
+										"segments",
+										"C"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Segment B",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/departments/30/segments/B",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"departments",
+										"30",
+										"segments",
+										"B"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get average salary by department",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/departments/avg-salary",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"departments",
+										"avg-salary"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get stats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/stats/by-country",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"stats",
+								"by-country"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

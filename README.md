@@ -19,3 +19,5 @@ Tambien se puede acceder a la coleccion de Postman y el detalle de los endpoints
 Para correr el proyecto ejecuta:
 
 `docker-compose up --build`
+
+Es posible que al inicio, SpringBoot se reinicie varias veces hasta que se concrete la conexión a la base de datos.
